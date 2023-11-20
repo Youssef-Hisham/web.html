@@ -2,7 +2,8 @@
     <html>
     <head>
     <title>History of Egypt</title>
-    <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         /* Container for the image */
         .image-container {
@@ -36,9 +37,39 @@
         font-weight: bold;
         text-align: center;
         }
+        .list a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.list a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: rgb(171, 38, 38);
+}
+
+@media screen and (max-width: 500px) {
+  .list a {
+    float: none;
+    display: block;
+  }
+}
     </style>
     </head>
     <body>
+<div class="list">
+    <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
+    <a href="#"><i class="fa fa-fw fa-search"></i> Search</a> 
+    <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+    <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+  </div>
+  
+        
     <!-- Image container with the black button and text -->
     <div class="image-container">
         <img src="https://assets.editorial.aetnd.com/uploads/2009/10/the-egyptian-pyramids-at-giza.jpg?width=3740&amp;height=400&amp;crop=2:1&quality=75&auto=webp" style="width:1450px;height:600px;" />
