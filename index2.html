@@ -1,400 +1,399 @@
-<!DOCTYPE html>
-<html>
+    <!DOCTYPE html>
+    <html>
 
-<head>
-    <title>History of Egypt</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        /* Container for the image */
-        .image-container {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* Style for the black button */
-        .black-button {
-            position: absolute;
-            top: 90%;
-            left: 55%;
-            transform: translate(-90%, -90%);
-            background-color: black;
-            color: rgb(209, 137, 137);
-            padding: 17px 60px;
-            text-decoration: none;
-            border: none;
-            border-radius: 9px;
-            cursor: pointer;
-        }
-
-        /* Style for the text on the image */
-        .image-text {
-            position: absolute;
-            top: 1%;
-            left: 51%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-size: 50px;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .list a {
-            float: left;
-            padding: 12px;
-            color: rgb(144, 86, 86);
-            text-decoration: none;
-            font-size: 17px;
-        }
-
-        .list a:hover {
-            background-color: #000;
-        }
-
-        .active {
-            background-color: rgb(231, 210, 210);
-        }
-
-        @media screen and (max-width: 500px) {
-            .list a {
-                float: none;
-                display: block;
+    <head>
+        <title>History of Egypt</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            /* Container for the image */
+            .image-container {
+                position: relative;
+                display: inline-block;
             }
-        }
 
-        div.one {
-            width: 900px;
-            display: grid;
-            border: 1px solid white;
-            /* padding: 10px;
-            margin: 10px; */
-            /* justify-content: center; */
+            /* Style for the black button */
+            .black-button {
+                position: absolute;
+                top: 90%;
+                left: 55%;
+                transform: translate(-90%, -90%);
+                background-color: black;
+                color: rgb(209, 137, 137);
+                padding: 17px 60px;
+                text-decoration: none;
+                border: none;
+                border-radius: 9px;
+                cursor: pointer;
+            }
 
-        }
+            /* Style for the text on the image */
+            .image-text {
+                position: absolute;
+                top: 1%;
+                left: 51%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: 50px;
+                font-weight: bold;
+                text-align: center;
+            }
 
-        div.two {
-            width: 900px;
-            display: grid;
-            border: 1px solid white;
+            .list a {
+                float: left;
+                padding: 12px;
+                color: rgb(144, 86, 86);
+                text-decoration: none;
+                font-size: 17px;
+            }
 
-            /* padding: 10px;
-            margin: 10px; */
-            /* justify-content: center; */
+            .list a:hover {
+                background-color: #000;
+            }
 
+            .active {
+                background-color: rgb(231, 210, 210);
+            }
 
-        }
+            @media screen and (max-width: 500px) {
+                .list a {
+                    float: none;
+                    display: block;
+                }
+            }
 
-        div.three {
-            width: 900px;
-            display: grid;
-            border: 1px solid white;
-            /* padding: 10px;
-            margin: 10px; */
-            /* justify-content: center; */
+            div.one {
+                width: 900px;
+                display: grid;
+                border: 1px solid white;
+                /* padding: 10px;
+                margin: 10px; */
+                /* justify-content: center; */
 
-        }
+            }
 
-        div.four {
-            width: 900px;
-            display: grid;
-            border: 1px solid white;
-            /* padding: 10px;
-            margin: 10px; */
-            /* justify-content: center; */
+            div.two {
+                width: 900px;
+                display: grid;
+                border: 1px solid white;
 
-        }
-
-
-        img {
-            width: 400px;
-            height: 400px;
-            display: flex;
-
-
-
-        }
-
-        p.para {
-            width: 800px;
-            display: flex;
-            padding: 10px;
-            margin: 20px;
-            border: 1px solid green;
-            color: beige;
-            background-color: black;
-
-
-        }
-
-        /* center {
-            background-color: #faf0e6;
-        } */
-
-        .image {
-            max-width: 100%;
-            height: auto;
-        }
-         section {
-                    padding: 60px 0;
-                   /* min-height: 100vh;*/
-                 
-        }
-         ul {
-                    margin: 0;
-                    padding: 0;
-                    list-style: none;
-         }
-        .contact-area {
-            border-bottom: 1px solid #353C46;
-            align-items: center;
-        }
-        
-        .contact-content p {
-            font-size: 15px;
-            margin: 30px 0 60px;
-            position: relative;
-        }
-        
-        .contact-content p::after {
-            background: #353C46;
-            bottom: -30px;
-            content: "";
-            height: 1px;
-            left: 50%;
-            position: absolute;
-            transform: translate(-50%);
-            width: 80%;
-        }
-        
-        .contact-content h6 {
-            color: #8b9199;
-            font-size: 15px;
-            font-weight: 400;
-            margin-bottom: 10px;
-        }
-        
-        .contact-content span {
-            color: #353c47;
-            margin: 0 10px;
-        }
-        
-        .contact-social {
-            margin-top: 30px;
-        }
-        
-        .contact-social > ul {
-            display: inline-flex;
-        }
-        
-        .contact-social ul li a {
-            border: 1px solid #8b9199;
-            color: #8b9199;
-            display: inline-block;
-            height: 40px;
-            margin: 0 10px;
-            padding-top: 7px;
-            transition: all 0.4s ease 0s;
-            width: 40px;
-        }
-        
-        .contact-social ul li a:hover {
-            border: 1px solid #FAB702;
-            color: #FAB702;
-        }
-        
-        .contact-content img {
-            max-width: 210px;
-        }
-        
-        section, footer {
-            background: #1A1E25;
-            color: #868c96;
-        }
-        
-        footer p {
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-    </style>
-</head>
-
-<body>
+                /* padding: 10px;
+                margin: 10px; */
+                /* justify-content: center; */
 
 
+            }
 
-    <div class="list">
-        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-        <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
-        <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-        <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
-    </div>
+            div.three {
+                width: 900px;
+                display: grid;
+                border: 1px solid white;
+                /* padding: 10px;
+                margin: 10px; */
+                /* justify-content: center; */
+
+            }
+
+            div.four {
+                width: 900px;
+                display: grid;
+                border: 1px solid white;
+                /* padding: 10px;
+                margin: 10px; */
+                /* justify-content: center; */
+
+            }
 
 
-    <!-- Image container with the black button and text -->
-    <div class="image-container">
-        <img src="https://assets.editorial.aetnd.com/uploads/2009/10/the-egyptian-pyramids-at-giza.jpg?width=3740&amp;height=400&amp;crop=2:1&quality=75&auto=webp"
-            style="width:1450px;height:600px;" />
-        <p class="image-text">Egyptian civilization</p>
-        <a href="#" class="black-button">Get started</a>
-    </div>
-    <header>
-        <h1>introduction</h1>
-        <h2>
-            "Step into the allure of Egypt's fascinating
-            civilization, where the sands of time whisper
-            tales of grandeur and mystique. Our exploration
-            transcends millennia, unveiling the architectural
-            marvels of the pyramids, the enduring mysteries of
-            the Sphinx, and the cultural brilliance that shaped
-            one of the world's oldest and most captivating civilizations.
-            Join us on a virtual sojourn, where history, art, and innovation converge
-            , revealing the timeless essence of Egypt's extraordinary heritage."
-        </h2>
-    </header>
-    <main>
+            img {
+                width: 400px;
+                height: 400px;
+                display: flex;
+            }
+
+            p.para {
+                width: 800px;
+                display: flex;
+                padding: 10px;
+                margin: 20px;
+                border: 1px solid green;
+                color: beige;
+                background-color: black;
+
+
+            }
+
+            /* center {
+                background-color: #faf0e6;
+            } */
+
+            .image {
+                max-width: 100%;
+                height: auto;
+            }
+            section {
+                        padding: 60px 0;
+                    /* min-height: 100vh;*/
+                    
+            }
+            ul {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+            }
+            .contact-area {
+                border-bottom: 1px solid #353C46;
+                align-items: center;
+            }
+            
+            .contact-content p {
+                font-size: 15px;
+                margin: 30px 0 60px;
+                position: relative;
+            }
+            
+            .contact-content p::after {
+                background: #353C46;
+                bottom: -30px;
+                content: "";
+                height: 1px;
+                left: 50%;
+                position: absolute;
+                transform: translate(-50%);
+                width: 80%;
+            }
+            
+            .contact-content h6 {
+                color: #8b9199;
+                font-size: 15px;
+                font-weight: 400;
+                margin-bottom: 10px;
+            }
+            
+            .contact-content span {
+                color: #353c47;
+                margin: 0 10px;
+            }
+            
+            .contact-social {
+                margin-top: 30px;
+            }
+            
+            .contact-social > ul {
+                display: inline-flex;
+            }
+            
+            .contact-social ul li a {
+                border: 1px solid #8b9199;
+                color: #8b9199;
+                display: inline-block;
+                height: 40px;
+                margin: 0 10px;
+                padding-top: 7px;
+                transition: all 0.4s ease 0s;
+                width: 40px;
+            }
+            
+            .contact-social ul li a:hover {
+                border: 1px solid #FAB702;
+                color: #FAB702;
+            }
+            
+            .contact-content img {
+                max-width: 210px;
+            }
+            
+            section, footer {
+                background: #1A1E25;
+                color: #868c96;
+            }
+            
+            footer p {
+                padding: 40px 0;
+                text-align: center;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+
+
+
+        <div class="list">
+            <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+            <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+            <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+            <a href="#"><i class="fa fa-fw fa-user"></i> sign up</a>
+        </div>
+
+
+        <!-- Image container with the black button and text -->
+        <div class="image-container">
+            <img src="https://assets.editorial.aetnd.com/uploads/2009/10/the-egyptian-pyramids-at-giza.jpg?width=3740&amp;height=400&amp;crop=2:1&quality=75&auto=webp"
+                style="width:1450px;height:600px;" />
+            <p class="image-text">Egyptian civilization</p>
+            <a href="#" class="black-button">Get started</a>
+        </div>
+        <header>
+            <h1>introduction</h1>
+            <h2>
+                "Step into the allure of Egypt's fascinating
+                civilization, where the sands of time whisper
+                tales of grandeur and mystique. Our exploration
+                transcends millennia, unveiling the architectural
+                marvels of the pyramids, the enduring mysteries of
+                the Sphinx, and the cultural brilliance that shaped
+                one of the world's oldest and most captivating civilizations.
+                Join us on a virtual sojourn, where history, art, and innovation converge
+                , revealing the timeless essence of Egypt's extraordinary heritage."
+            </h2>
+        </header>
+        <main>
+            <center>
+
+                <div class="one">
+                    <P class="para">ABU SIMBEL TEMPLE <br><br>
+
+
+                        Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel
+                        (Arabic:
+                        أبو
+                        سمبل), Aswan Governorate, Upper Egypt, near the border with Sudan. It is situated on the western
+                        bank of
+                        Lake
+                        Nasser, about 230 km (140 mi) southwest of Aswan (about 300 km (190 mi) by road). The twin temples
+                        were
+                        originally
+                        carved out of the mountainside in the 13th century BC, during the 19th Dynasty reign of the Pharaoh
+                        Ramesses
+                        II.
+                        Their huge external rock relief figures of Ramesses II have become iconic. His wife, Nefertari, and
+                        children
+                        can
+                        be
+                        seen in smaller figures by his feet. Sculptures inside the Great Temple commemorate Ramesses II's
+                        heroic
+                        leadership
+                        at the Battle of Kadesh. <img
+                            src="https://th.bing.com/th/id/R.9fe64483bb1ea5b418ff42f1a169b312?rik=f741WnN3dR3z0A&riu=http%3a%2f%2fwww.egyptkeytours.com%2fwp-content%2fuploads%2f2017%2f09%2fabo-simbel.jpg&ehk=u3DdoAdfJvrMiYGceHCtl%2fX5jnioZHmym%2bqikUnc3fs%3d&risl=&pid=ImgRaw&r=0">
+                    </P>
+                </div>
+
+
+                <div class="two">
+                    <P class="para"> The Great Pyramid of Giza<br><br>
+
+
+                        The Great Pyramid of Giza[a] is the largest Egyptian pyramid and served as the tomb of pharaoh
+                        Khufu,
+                        who ruled during the Fourth Dynasty of the Old Kingdom. Built in the early 26th century BC, over a
+                        period of about 27 years,[3] the pyramid is the oldest of the Seven Wonders of the Ancient World,
+                        and
+                        the only wonder that has remained largely intact. It is the most famous monument of the Giza pyramid
+                        complex, which is part of the UNESCO World Heritage Site "Memphis and its Necropolis".[4] It is
+                        situated
+                        at the northern end of the line of the three pyramids at Giza.
+
+                        Initially standing at 146.6 metres (481 feet), the Great Pyramid was the world's tallest human-made
+                        structure for more than 3,800 years. Over time, most of the smooth white limestone casing was
+                        removed,
+                        which lowered the pyramid's height to the current 138.5 metres (454.4 ft); what is seen today is the
+                        underlying core structure. The base was measured to be about 230.3 metres (755.6 ft) square, giving
+                        a
+                        volume of roughly 2.6 million cubic metres (92 million cubic feet), which includes an internal
+                        hillock.[5] <img src="https://th.bing.com/th/id/OIP.0ucAOABqirx_XjdgGfoerAHaE7?rs=1&pid=ImgDetMain">
+                    </P>
+                </div>
+                <div class="three">
+                    <P class="para"> The Great Sphinx <br><br>
+
+
+                        The Great Sphinx of Giza is a limestone statue of a reclining sphinx, a mythical creature with the
+                        head
+                        of a human and the body of a lion.[1] Facing directly from west to east, it stands on the Giza
+                        Plateau
+                        on the west bank of the Nile in Giza, Egypt. The face of the Sphinx appears to represent the pharaoh
+                        Khafre.[2] The original shape of the Sphinx was cut from the bedrock, and has since been restored
+                        with
+                        layers of limestone blocks.[3] It measures 73 m (240 ft) long from paw to tail, 20 m (66 ft) high
+                        from
+                        the base to the top of the head and 19 m (62 ft) wide at its rear haunches.[4]
+
+                        The Sphinx is the oldest known monumental sculpture in Egypt and one of the most recognizable
+                        statues in
+                        the world. The archaeological evidence suggests that it was created by ancient Egyptians of the Old
+                        Kingdom during the reign of Khafre (c. 2558–2532 BC).[5][6][7]
+
+                        The circumstances surrounding the Sphinx's nose being broken off are uncertain, but close inspection
+                        suggests a deliberate act using rods or chisels.[8] Contrary to a popular myth, it was not broken
+                        off by
+                        cannonfire from Napoleon's troops during his 1798 Egyptian campaign. Its absence is in fact depicted
+                        in
+                        artwork predating Napoleon and referred to in descriptions by the 15th-century historian al-Maqrīzī
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Great_Sphinx_of_Giza_May_2015.JPG/1200px-Great_Sphinx_of_Giza_May_2015.JPG">
+                    </P>
+                </div>
+                <div class="four">
+                    <P class="para">temple of Hatshepsut <br><br>
+
+
+                        The mortuary temple of Hatshepsut (Egyptian: Ḏsr-ḏsrw meaning "Holy of Holies") is a mortuary temple
+                        built during the reign of Pharaoh Hatshepsut of the Eighteenth Dynasty of Egypt.[b] Located opposite
+                        the
+                        city of Luxor, it is considered to be a masterpiece of ancient architecture.[c] Its three massive
+                        terraces rise above the desert floor and into the cliffs of Deir el-Bahari. Her tomb, KV20, lies
+                        inside
+                        the same massif capped by El Qurn, a pyramid for her mortuary complex. At the edge of the desert, 1
+                        km
+                        (0.62 mi) east, connected to the complex by a causeway lies the accompanying valley temple. Across
+                        the
+                        river Nile, the whole structure points towards the monumental Eighth Pylon, Hatshepsut's most
+                        recognizable addition to the Temple of Karnak and the site from which the procession of the
+                        Beautiful
+                        Festival of the Valley departed. The temple's twin functions are identified by its axes: its main
+                        east-west axis served to receive the barque of Amun-Re at the climax of the festival, while its
+                        north-south axis represented the life cycle of the pharaoh from coronation to rebirth. <img
+                            src="https://images.squarespace-cdn.com/content/v1/573ed2458259b5f9e4526bd7/1554828167305-Z7FUJ1FQNFD5XUV9XJSP/ke17ZwdGBToddI8pDm48kHH9S2ID7_bpupQnTdrPcoF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RRB5rUELEv7EY2n0AZOrEupxpSyqbqKSgmzcCPWV5WMiQ/Hatshepsut+Temple+Luxor">
+                    </P>
+                </div>
+
+            </center>
+        </main>
         <center>
-
-            <div class="one">
-                <P class="para">ABU SIMBEL TEMPLE <br><br>
-
-
-                    Abu Simbel is a historic site comprising two massive rock-cut temples in the village of Abu Simbel
-                    (Arabic:
-                    أبو
-                    سمبل), Aswan Governorate, Upper Egypt, near the border with Sudan. It is situated on the western
-                    bank of
-                    Lake
-                    Nasser, about 230 km (140 mi) southwest of Aswan (about 300 km (190 mi) by road). The twin temples
-                    were
-                    originally
-                    carved out of the mountainside in the 13th century BC, during the 19th Dynasty reign of the Pharaoh
-                    Ramesses
-                    II.
-                    Their huge external rock relief figures of Ramesses II have become iconic. His wife, Nefertari, and
-                    children
-                    can
-                    be
-                    seen in smaller figures by his feet. Sculptures inside the Great Temple commemorate Ramesses II's
-                    heroic
-                    leadership
-                    at the Battle of Kadesh. <img
-                        src="https://th.bing.com/th/id/R.9fe64483bb1ea5b418ff42f1a169b312?rik=f741WnN3dR3z0A&riu=http%3a%2f%2fwww.egyptkeytours.com%2fwp-content%2fuploads%2f2017%2f09%2fabo-simbel.jpg&ehk=u3DdoAdfJvrMiYGceHCtl%2fX5jnioZHmym%2bqikUnc3fs%3d&risl=&pid=ImgRaw&r=0">
-                </P>
-            </div>
-
-
-            <div class="two">
-                <P class="para"> The Great Pyramid of Giza<br><br>
-
-
-                    The Great Pyramid of Giza[a] is the largest Egyptian pyramid and served as the tomb of pharaoh
-                    Khufu,
-                    who ruled during the Fourth Dynasty of the Old Kingdom. Built in the early 26th century BC, over a
-                    period of about 27 years,[3] the pyramid is the oldest of the Seven Wonders of the Ancient World,
-                    and
-                    the only wonder that has remained largely intact. It is the most famous monument of the Giza pyramid
-                    complex, which is part of the UNESCO World Heritage Site "Memphis and its Necropolis".[4] It is
-                    situated
-                    at the northern end of the line of the three pyramids at Giza.
-
-                    Initially standing at 146.6 metres (481 feet), the Great Pyramid was the world's tallest human-made
-                    structure for more than 3,800 years. Over time, most of the smooth white limestone casing was
-                    removed,
-                    which lowered the pyramid's height to the current 138.5 metres (454.4 ft); what is seen today is the
-                    underlying core structure. The base was measured to be about 230.3 metres (755.6 ft) square, giving
-                    a
-                    volume of roughly 2.6 million cubic metres (92 million cubic feet), which includes an internal
-                    hillock.[5] <img src="https://th.bing.com/th/id/OIP.0ucAOABqirx_XjdgGfoerAHaE7?rs=1&pid=ImgDetMain">
-                </P>
-            </div>
-            <div class="three">
-                <P class="para"> The Great Sphinx <br><br>
-
-
-                    The Great Sphinx of Giza is a limestone statue of a reclining sphinx, a mythical creature with the
-                    head
-                    of a human and the body of a lion.[1] Facing directly from west to east, it stands on the Giza
-                    Plateau
-                    on the west bank of the Nile in Giza, Egypt. The face of the Sphinx appears to represent the pharaoh
-                    Khafre.[2] The original shape of the Sphinx was cut from the bedrock, and has since been restored
-                    with
-                    layers of limestone blocks.[3] It measures 73 m (240 ft) long from paw to tail, 20 m (66 ft) high
-                    from
-                    the base to the top of the head and 19 m (62 ft) wide at its rear haunches.[4]
-
-                    The Sphinx is the oldest known monumental sculpture in Egypt and one of the most recognizable
-                    statues in
-                    the world. The archaeological evidence suggests that it was created by ancient Egyptians of the Old
-                    Kingdom during the reign of Khafre (c. 2558–2532 BC).[5][6][7]
-
-                    The circumstances surrounding the Sphinx's nose being broken off are uncertain, but close inspection
-                    suggests a deliberate act using rods or chisels.[8] Contrary to a popular myth, it was not broken
-                    off by
-                    cannonfire from Napoleon's troops during his 1798 Egyptian campaign. Its absence is in fact depicted
-                    in
-                    artwork predating Napoleon and referred to in descriptions by the 15th-century historian al-Maqrīzī
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Great_Sphinx_of_Giza_May_2015.JPG/1200px-Great_Sphinx_of_Giza_May_2015.JPG">
-                </P>
-            </div>
-            <div class="four">
-                <P class="para">temple of Hatshepsut <br><br>
-
-
-                    The mortuary temple of Hatshepsut (Egyptian: Ḏsr-ḏsrw meaning "Holy of Holies") is a mortuary temple
-                    built during the reign of Pharaoh Hatshepsut of the Eighteenth Dynasty of Egypt.[b] Located opposite
-                    the
-                    city of Luxor, it is considered to be a masterpiece of ancient architecture.[c] Its three massive
-                    terraces rise above the desert floor and into the cliffs of Deir el-Bahari. Her tomb, KV20, lies
-                    inside
-                    the same massif capped by El Qurn, a pyramid for her mortuary complex. At the edge of the desert, 1
-                    km
-                    (0.62 mi) east, connected to the complex by a causeway lies the accompanying valley temple. Across
-                    the
-                    river Nile, the whole structure points towards the monumental Eighth Pylon, Hatshepsut's most
-                    recognizable addition to the Temple of Karnak and the site from which the procession of the
-                    Beautiful
-                    Festival of the Valley departed. The temple's twin functions are identified by its axes: its main
-                    east-west axis served to receive the barque of Amun-Re at the climax of the festival, while its
-                    north-south axis represented the life cycle of the pharaoh from coronation to rebirth. <img
-                        src="https://images.squarespace-cdn.com/content/v1/573ed2458259b5f9e4526bd7/1554828167305-Z7FUJ1FQNFD5XUV9XJSP/ke17ZwdGBToddI8pDm48kHH9S2ID7_bpupQnTdrPcoF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0nQwvinDXPV4EYh2MRzm-RRB5rUELEv7EY2n0AZOrEupxpSyqbqKSgmzcCPWV5WMiQ/Hatshepsut+Temple+Luxor">
-                </P>
-            </div>
-
-        </center>
-    </main>
-    <center>
-    <section class="contact-area" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="contact-content text-center">
-                        <a href="#"><img class="image" src="https://th.bing.com/th/id/OIP.Ts3yufJSJyTGIyCguqHYawHaFj?rs=1&pid=ImgDetMain" alt="logo"></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum </p>
-                        <div class="hr"></div>
-                        <h6>1120 Lorem ipsum dolor sit amet, KC 179050, Chandigarh.</h6>
-                        <h6>+01 2345 6789 12<span>|</span>+01 2345 6789 12</h6>
-                        <div class="contact-social">
-                            <ul>
-                                <li><a class="hover-target" href="#"><i class="fa fa-facebook-f"></i></a></li>
-                                <li><a class="hover-target" href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a class="hover-target" href="#"><i class="fa fa-github"></i></a></li>
-                                <li><a class="hover-target" href="#"><i class="fa fa-behance"></i></a></li>
-                                <li><a class="hover-target" href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                            </ul> 
+        <section class="contact-area" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-3">
+                        <div class="contact-content text-center">
+                            <a href="#"><img class="image" src="https://th.bing.com/th/id/OIP.Ts3yufJSJyTGIyCguqHYawHaFj?rs=1&pid=ImgDetMain" alt="logo"></a>
+                            <p>
+                            From the timeless banks of the Nile, Egypt's civilization emerged, carving statues that tell the story of a culture that laid the foundations for a profound human history. </p>
+                            <div class="hr"></div>
+                            <h6>made by FCI (SCU) Students </h6>
+                            <h6>+012 7678 5722<span>|</span>+01 2345 6789 12</h6>
+                            <div class="contact-social">
+                                <ul>
+                                    <li><a class="hover-target" href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                    <li><a class="hover-target" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a class="hover-target" href="#"><i class="fa fa-github"></i></a></li>
+                                    <li><a class="hover-target" href="#"><i class="fa fa-behance"></i></a></li>
+                                    <li><a class="hover-target" href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                                </ul> 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- =============== 1.9 Contact Area End ====================-->
-    <!-- =============== 1.9 Footer Area Start ====================-->
-    <footer>
-        <p>Copyright &copy; 2019 <br> All Rights Reserved.</p>
-    </footer>
-</center>
-</body>
+        </section>
+        <!-- =============== 1.9 Contact Area End ====================-->
+        <!-- =============== 1.9 Footer Area Start ====================-->
+        <footer>
+            <p>Copyright &copy; 2023 <br> All Rights Reserved.</p>
+        </footer>
+    </center>
+    </body>
 
-</html>
+    </html>
