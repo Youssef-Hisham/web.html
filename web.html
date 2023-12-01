@@ -170,7 +170,54 @@
             outline: none;
             box-shadow: 0 0 5px rgba(238, 255, 0, 0.986);
         }
+      
+        .main-content {
+            text-align: center;
+            padding: 50px;
+        }
 
+        .title {
+            color: #ff8c00;
+            font-size: 2.5em;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        .article {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .article p {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #333;
+            font-style: italic;
+        }
+        .image-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px; /* تباعد بين الصور */
+        }
+
+        .image {
+            width: 300px; /* تحديد عرض الصور */
+            height: 200px; /* تحديد ارتفاع الصور */
+            object-fit: cover;
+            border-radius: 10px; /* إضافة زوايا مستديرة */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+            transition: transform 0.3s ease; /* تحديد الانتقال عند التحويم */
+        }
+
+        .image:hover {
+            transform: scale(1.1); /* زيادة الحجم عند التحويم */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* تغيير ظل التحويم */
+        }
   
 </style>
 <body>
@@ -203,7 +250,30 @@
         <br/> <br/> 
         <button >JOIN WITH US </button>
     </div>
-
+    <section class="main-content">
+      <h2 class="title">Welcome to Gym Zone</h2>
+      <div class="article">
+          <p>
+              Transform your body, mind, and spirit at Gym Zone – your ultimate fitness destination.
+          </p>
+          <p>
+              Our state-of-the-art facilities and expert trainers are here to guide you on your fitness journey.
+          </p>
+          <p>
+              Whether you're a beginner or a seasoned athlete, discover a diverse range of classes and personalized plans tailored to achieve your fitness goals.
+          </p>
+          <p>
+              Join us and embrace a healthier, stronger you.
+          </p>
+      </div>
+  </section>
+  <div class="image-container">
+    <img class="image" src="https://th.bing.com/th/id/OIG.ECED7_UoTUC77pwKkg_e?pid=ImgGn" alt="Image 1">
+    <img class="image" src="https://th.bing.com/th/id/OIG.Em1KsOBiDhxL2NVsfnl9?pid=ImgGn" alt="Image 2">
+    <img class="image" src="https://th.bing.com/th/id/OIG.bVkyFJa1fOGqkXvIflP4?w=1024&h=1024&rs=1&pid=ImgDetMain" alt="Image 3">
+    <img class="image" src="https://th.bing.com/th/id/OIG.PZxKfMEwvtsMjoPxMqVv?pid=ImgGn&fbclid=IwAR0JKjXsfwAfiMCV625iH9N43qrXvJkG0m9kcMklQ9RkvqJEc5q5fkA4gkQ" alt="Image 4">
+    <img class="image" src="https://th.bing.com/th/id/OIG.s6v_fqbSzQoEcRDlQ4pb?pid=ImgGn&fbclid=IwAR00pQNVazmDwVpW9opy6f0qJEe0mMtr3AxUGlXf85orKQBvkst5Qc5brPU" alt="Image 5">
+</div>
 
   
   <section class="cards" id="plans">
