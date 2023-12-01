@@ -46,6 +46,67 @@
       display: block;
     }
   }
+  title{
+    display: flex;
+    justify-content: center;
+    color:orange;
+    font-size: 6.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+width: 19em;
+box-shadow: 0 5px 25px rgba(1 1 1/ 15%);
+margin: 10px;
+justify-content: center;
+border-radius: 10px;
+padding: 25px;
+transition: 0.7s ease;
+
+
+
+}
+
+.card:hover{ transform: scale(1.1);}
+
+.icon{
+  color: orange;
+text-align: left;
+font-size: 4em;
+margin: 5px;
+padding-bottom: 1px;
+height: 100px;
+    
+}
+.info{
+
+color: black;
+font-size: 1.8em;
+text-align: center;
+
+/* width: 9em; */
+}
+.info h3{
+
+    color: orange;
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+font-size: 1.5em;
+font-weight: 700;
+}
+.info p{
+width: 8.7em;
+font-weight: 600;
+text-align: left;
+
+}
 </style>
 <body>
   <div class="navbar">
@@ -60,5 +121,55 @@
       <span style="color: orange; font-weight: bold;">Gym Zone</span>
     </div>
   </div>
+  <section class="cards" id="plans">
+    <h2 class="title">Plans</h2>
+    
+    <div class="content">
+        <div class="card">
+            <div class="icon">
+            <i class="fa-solid fa-dumbbell"></i>  </div>
+            <div class="info">
+                <h3>1 month</h3>
+                <p> 3 invtations.</p>
+                <p>full access to all classes.</p>
+                <p>1 visit for saunna.</p>
+                <p>1 visit for jacuzzi.</p> 
+            </div>
+        </div>
+            <div class="card">
+                <div class="icon">
+                <i class="fa-solid fa-dumbbell"></i> </div>
+                <div class="info">
+                    <h3> 3 months</h3>
+                    <p> 6 invtations.</p>
+                    <p>full access to all classes.</p>
+                    <p>12 visits for saunna.</p>
+                    <p>12 visits for jacuzzi.</p> 
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-dumbbell"></i>  </div>
+                <div class="info">
+                    <h3>6 months</h3>
+                    <p> 9 invtations.</p>
+                    <p>full access to all classes.</p>
+                    <p>24 visits for saunna.</p>
+                    <p>24 visits for jacuzzi.</p> 
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fa-solid fa-dumbbell"></i>  </div>
+                <div class="info">
+                    <h3>annual</h3>
+                    <p> 12 invtations.</p>
+                    <p>full access to all classes.</p>
+                    <p>unlimited visits for saunna.</p>
+                    <p>unlimited visits for jacuzzi.</p> 
+                
+                </div>
+            </div>
+
 </body>
 </html>
