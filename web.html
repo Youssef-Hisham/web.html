@@ -9,111 +9,125 @@
   }
 
   .navbar {
-    width: 100%;
-    background-color: white;
-    overflow: auto;
-  }
+            width: 100%;
+            background-color: white;
+            overflow: auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
 
-  .brand {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-  }
+        .brand {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
 
-  .brand i {
-    color: orange;
-    margin-right: 5px;
-  }
+        .brand i {
+            color: #ff8c00;
+            margin-right: 5px;
+        }
+        .brand span {
+            font-size: 2em; 
+            font-weight: 900; 
+            letter-spacing: 2px; 
+            color: #333; 
+            text-transform: uppercase; 
+        }
 
-  .navbar a {
-    float: right;
-    padding: 12px;
-    color: black;
-    text-decoration: none;
-    font-size: 17px;
-  }
+        .navbar a {
+            float: right;
+            padding: 12px;
+            color: #333;
+            text-decoration: none;
+            font-size: 17px;
+        }
 
-  .navbar a:hover {
-    background-color: orange;
-  }
+        .navbar a:hover {
+            background-color: #ff8c00;
+            color: white;
+        }
 
-  .active {
-    background-color: white;
-  }
+        .active {
+            background-color: white;
+        }
 
-  @media screen and (max-width: 500px) {
-    .navbar a {
-      float: none;
-      display: block;
-    }
-  }
-  .title{
-    display: flex;
-    justify-content: center;
-    color:orange;
-    font-size: 4.2em;
-    font-weight: 800;
-    margin-bottom: 30px;
-}
-.content{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-.card{
-    display: flex;
-width: 19em;
-box-shadow: 0 5px 25px rgba(1 1 1/ 15%);
-margin: 10px;
-justify-content: center;
-border-radius: 10px;
-padding: 25px;
-transition: 0.7s ease;
+        @media screen and (max-width: 500px) {
+            .navbar a {
+                float: none;
+                display: block;
+                text-align: center;
+            }
+        }
+  .title {
+            display: flex;
+            justify-content: center;
+            color: #ff8c00;
+            font-size: 4.2em;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
 
+        .content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
 
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 18em;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 10px;
+            padding: 25px;
+            transition: 0.7s ease;
+            background-color: white;
+        }
 
-}
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
 
-.card:hover{ transform: scale(1.1);}
+        .icon {
+            color: #ff8c00;
+            font-size: 4em;
+            margin-bottom: 10px;
+        }
 
-.icon{
-  color: orange;
-text-align: left;
-font-size: 4em;
-margin: 5px;
-padding-bottom: 1px;
-height: 100px;
-    
-}
-.info{
+        .info {
+            color: #333;
+            font-size: 1.2em;
+            text-align: center;
+        }
 
-color: black;
-font-size: 1.8em;
-text-align: center;
+        .info h3 {
+            color: #ff8c00;
+            padding: 15px;
+            margin: 10px;
+            font-size: 1.5em;
+            font-weight: 700;
+        }
 
-/* width: 9em; */
-}
-.info h3{
-
-    color: orange;
-    text-align: center;
-    padding: 15px;
-    margin: 10px;
-font-size: 1.5em;
-font-weight: 700;
-}
-.info p{
-width: 8.7em;
-font-weight: 600;
-text-align: left;
-
-}
+        .info p {
+            width: 100%;
+            font-weight: 600;
+            text-align: left;
+            margin: 5px 0;
+        }
 
  /* Main image */
             .main-image {
-            width: 100%;
-            height: 90%;
-            object-fit:cover;
+              width: 100%;
+        height: 90%;
+        object-fit: cover;
+        border: 5px solid black;
             }
 
             .main-text {
@@ -184,7 +198,9 @@ text-align: left;
     " alt="Main image" class="main-image">
     <div class="main-text">
         <h1>BUILD <span style="color: orange;"</span>YOUR</span>  BODY <span style="color: orange;"</span>STRONG</span></h1>
+        <br/>
         <p>Ready to change your physique, but can't work out in the gym?</p>
+        <br/> <br/> 
         <button >JOIN WITH US </button>
     </div>
 
