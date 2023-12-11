@@ -1,11 +1,16 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>Gym Products Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   
+    <title>Gym Store</title>
+</head>
+<body>
     <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+ body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
     .container { display: flex; }
     .filter { width: 20%; background-color: #f4f4f4; padding: 20px; }
     .products { width: 80%; padding: 20px; display: flex; flex-wrap: wrap; }
@@ -18,81 +23,555 @@
     padding: 10px; /* Adds some padding inside the divs */
     border: 1px solid #000; /* Adds a border around the divs */
     }
+    .filter {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: sticky; /* ليظل الفلتر ثابتًا أثناء التمرير */
+    top: 0; /* يثبت الفلتر في أعلى الصفحة */
+}
 
-    </style>
-    </head>
-    <body>
+.products {
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
 
-    <div class="container">
-    <div class="filter">
-        <!-- Add filter options here -->
+
+        .shipping-message {
+    background-color:white;
+    color:black;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    min-height: 100vh; 
+    }
+    
+    .navbar {
+        background-color:black;
+        font-size: 20px;
+        overflow:hidden;
+        height: 130px;
+           
         
+        
+    }
+  
+    
+    .navbar a:hover {
+        background-color: orange;
+        color: black;
+    }
+    
+    .brand {
+            display: flex;
+            align-items: center;
+            padding: 50px;
+        }
 
-    </div>
+        .brand i {
+            color: #ff8c00;
+            margin-right: 5px;
+        }
+        .brand span {
+            font-size: 1.2em; 
+            font-weight: 900; 
+            letter-spacing: 2px; 
+            color:white; 
+            text-transform: uppercase; 
+        }
+    
+    .nav-links {
+        float: right;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-links li {
+        float: right;
+    position: relative;
+    }
+    
+    .nav-links a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 17px;
+        text-decoration: none;
+    }
+    .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    .nav-links a:hover {
+        background-color: orange;
+        color: black;
+    }
+    .search-icon, .user-icon {
+    font-size: 20px;
+    margin-left: 10px;
+    line-height: 100px;
+}
 
+.search-icon i, .user-icon i {
+    margin: 0;
+    padding: 0;
+}
+@media screen and (max-width: 500px) {
+            .navbar a {
+                float: none;
+                display: block;
+                text-align: center;
+            }
+        }
+    
+    .card-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card h2 {
+    color: #333;
+}
+
+.card p {
+    color: #666;
+}
+.card i {
+    font-size: 24px;
+    color: orange;
+    margin-bottom: 10px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+  background-color: black;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: orange;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: orange;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: orange;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.filter-container {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#filterButton {
+    width: 120px; /* تعديل العرض حسب الحاجة */
+    padding: 10px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.filter-menu {
+    display: none;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+    min-width: 200px;
+}
+
+.filter-menu label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.filter-menu select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+#filterMenu button {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#filterMenu button:hover {
+    background-color: black;
+}
+.products {
+            width: 75%;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .color-option,
+        .size-option {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+  
+    </style>
+
+
+<div class="shipping-message">
+    FREE SHIPPING ON ORDERS $150+ (US DOMESTIC ONLY)
+</div>
+<nav class="navbar">
+    <ul class="nav-links">
+        <li class="search-icon"><a href="#"><i class="fas fa-search"></i></a></li>
+        <li class="user-icon"><a href="#"><i class="fas fa-user"></i></a></li>
+    </ul>
+    <div class="brand">
+        <i class="fa fa-fw fa-fire" style="font-size: 30px;"></i>
+        <span style="color: orange; font-weight: bold;"><span style="color: #ff8c00;">G</span>  <span style="color: white;">YM ZONE</span>
+      </div>
+</nav>
+
+<body class="product-page">
+
+
+    
+</body>
+<div class="container">
+    <div class="filter-container">
+        <button id="filterButton">Filter</button>
+        <div class="filter-menu" id="filterMenu">
+            <label for="size">Size:</label>
+            <select id="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+    
+            <label for="color">Color:</label>
+            <select id="color">
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+            </select>
+    
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
     </div>
+    
+  
+
+  </div>
 
 
 <div class="products">
-        <!-- Product 1 -->
-    <div class="product">
-        <img src="https://www.gymreapers.com/cdn/shop/files/quick-locking-strength-kit-all-black_1024_800x.jpg?v=1700697057" alt="Product 1" class="product-image">
-        <h3>All Black Training Kit</h3>
-        <p>$19.99</p>
-            <div>
-                <span class="color-option" style="background-color: red;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/quick-locking-strength-kit-red-main_800x.jpg?v=1699380191', this)"></span>
-                <span class="color-option" style="background-color: green;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/quick-locking-strength-kit-green-main_800x.jpg?v=1699379351', this)"></span>
-                <span class="color-option" style="background-color: rgb(29, 9, 9);" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/quick-locking-strength-kit-all-black_1024_800x.jpg?v=1700697057', this)"></span>
-                <span class="color-option" style="background-color: black;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/quick-locking-strength-kit-mid-night-camo-main_800x.jpg?v=1699379718', this)"></span>
-            </div>
-    </div>
+      <!-- Product 1 -->
+  <div class="product">
+      <img src="https://www.gymreapers.com/cdn/shop/files/quick-locking-strength-kit-all-black_1024_800x.jpg?v=1700697057" alt="Product 1" class="product-image">
+      <h3>All Black Training Kit</h3>
+      <p>$19.99</p>
+          <div>
+              <span class="color-option" style="background-color: red;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/quick-locking-strength-kit-red-main_800x.jpg?v=1699380191', this)"></span>
+              <span class="color-option" style="background-color: green;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/quick-locking-strength-kit-green-main_800x.jpg?v=1699379351', this)"></span>
+              <span class="color-option" style="background-color: rgb(29, 9, 9);" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/quick-locking-strength-kit-all-black_1024_800x.jpg?v=1700697057', this)"></span>
+              <span class="color-option" style="background-color: black;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/quick-locking-strength-kit-mid-night-camo-main_800x.jpg?v=1699379718', this)"></span>
+          </div>
+  </div>
 
-        <!-- Product 2 -->
-    <div class="product">
-        <img src="https://www.gymreapers.com/cdn/shop/files/Quick-Locking-Belt-Black-Black-main.jpg?v=1700665566&width=400" alt="Product 1" class="product-image">
-        <h3>Quick Locking Weightlifting Belt | Premium Back Support - Tan</h3>
-        <p>$30</p>
-            <div>
-                <span class="color-option" style="background-color: red;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/products/quick-locking-belt-red_73c8507f-a84a-4c41-924b-07ae718a0962_800x.jpg?v=1658957034', this)"></span>
-                <span class="color-option" style="background-color: green;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/products/quick-locking-belt-grn_167df793-8d96-46f2-8378-7d1ff0d50d8d_800x.jpg?v=1658956813', this)"></span>
-                <span class="color-option" style="background-color: rgb(227, 227, 227);" onclick="changeColor('https://www.gymreapers.com/cdn/shop/products/quick-locking-belt-sand_12935fd0-ae7c-4580-b507-cc6f1f9bf0f9_800x.jpg?v=1658957053', this)"></span>
-                <span class="color-option" style="background-color: black;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/Quick-Locking-Belt-Black-Black-main.jpg?v=1700665566&width=400', this)"></span>
-            </div>
-    </div>
+      <!-- Product 2 -->
+  <div class="product">
+      <img src="https://www.gymreapers.com/cdn/shop/files/Quick-Locking-Belt-Black-Black-main.jpg?v=1700665566&width=400" alt="Product 1" class="product-image">
+      <h3>Quick Locking Weightlifting Belt | Premium Back Support - Tan</h3>
+      <p>$30</p>
+          <div>
+              <span class="color-option" style="background-color: red;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/products/quick-locking-belt-red_73c8507f-a84a-4c41-924b-07ae718a0962_800x.jpg?v=1658957034', this)"></span>
+              <span class="color-option" style="background-color: green;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/products/quick-locking-belt-grn_167df793-8d96-46f2-8378-7d1ff0d50d8d_800x.jpg?v=1658956813', this)"></span>
+              <span class="color-option" style="background-color: rgb(227, 227, 227);" onclick="changeColor('https://www.gymreapers.com/cdn/shop/products/quick-locking-belt-sand_12935fd0-ae7c-4580-b507-cc6f1f9bf0f9_800x.jpg?v=1658957053', this)"></span>
+              <span class="color-option" style="background-color: black;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/Quick-Locking-Belt-Black-Black-main.jpg?v=1700665566&width=400', this)"></span>
+          </div>
+  </div>
 
-    <!-- Product 3 -->
-    <div class="product">
-        <img src="https://www.gymreapers.com/cdn/shop/files/Gravestone-Duffle-sand-front_800x.jpg?v=1692895821" alt="Product 1" class="product-image">
-        <h3>Gymreapers Gravestone Duffle - Desert Sand</h3>
-        <p>$250</p>
-            <div>
-                <span class="color-option" style="background-color: rgb(178, 178, 178);" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/Gunmetal-duffle-main_800x.jpg?v=1693263676', this)"></span>
-                <span class="color-option" style="background-color: green" onclick="changeColor('https://www.gymreapers.com/cdn/shop/products/arm-blast-green_8130ec76-8297-44d4-8863-86f8494d6494.jpg?v=1658859582&width=800', this)"></span>
-                <span class="color-option" style="background-color: black;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/Onyx_PHO07956_800x.jpg?v=1694125949', this)"></span>
-            </div>
-    </div>
+  <!-- Product 3 -->
+  <div class="product">
+      <img src="https://www.gymreapers.com/cdn/shop/files/Gravestone-Duffle-sand-front_800x.jpg?v=1692895821" alt="Product 1" class="product-image">
+      <h3>Gymreapers Gravestone Duffle - Desert Sand</h3>
+      <p>$250</p>
+          <div>
+              <span class="color-option" style="background-color: rgb(178, 178, 178);" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/Gunmetal-duffle-main_800x.jpg?v=1693263676', this)"></span>
+              <span class="color-option" style="background-color: green" onclick="changeColor('https://www.gymreapers.com/cdn/shop/products/arm-blast-green_8130ec76-8297-44d4-8863-86f8494d6494.jpg?v=1658859582&width=800', this)"></span>
+              <span class="color-option" style="background-color: black;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/files/Onyx_PHO07956_800x.jpg?v=1694125949', this)"></span>
+          </div>
+  </div>
 
-    
-    <!-- Product 4 -->
-    <div class="product">
-        <img src="https://www.gymreapers.com/cdn/shop/products/arm-blast-red_a78555b5-2579-415f-938f-69aab32fab57.jpg?v=1658859501&width=800" alt="Product 1" class="product-image">
-        <h3>GYMREAPERS ARM BLASTER</h3>
-        <p>$60</p>
-        
-            <div>
-                <span class="color-option" style="background-color: rgb(240, 14, 14);" onclick="changeColor('https://www.gymreapers.com/cdn/shop/products/arm-blast-red_a78555b5-2579-415f-938f-69aab32fab57.jpg?v=1658859501&width=800', this)"></span>
-                <span class="color-option" style="background-color: black;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/products/Arm-Blaster-Black_b9f84836-172e-4af0-a442-fc47f3585657.jpg?v=1614099640&width=800', this)"></span>
-            </div>
-    </div>
+  
+  <!-- Product 4 -->
+  <div class="product">
+      <img src="https://www.gymreapers.com/cdn/shop/products/arm-blast-red_a78555b5-2579-415f-938f-69aab32fab57.jpg?v=1658859501&width=800" alt="Product 1" class="product-image">
+      <h3>GYMREAPERS ARM BLASTER</h3>
+      <p>$60</p>
+      
+          <div>
+              <span class="color-option" style="background-color: rgb(240, 14, 14);" onclick="changeColor('https://www.gymreapers.com/cdn/shop/products/arm-blast-red_a78555b5-2579-415f-938f-69aab32fab57.jpg?v=1658859501&width=800', this)"></span>
+              <span class="color-option" style="background-color: black;" onclick="changeColor('https://www.gymreapers.com/cdn/shop/products/Arm-Blaster-Black_b9f84836-172e-4af0-a442-fc47f3585657.jpg?v=1614099640&width=800', this)"></span>
+          </div>
+  </div>
 
 </div>
 
-    <script>
-    function changeColor(imageSrc, element) {
-    var productImage = element.closest('.product').querySelector('.product-image');
-    productImage.src = imageSrc;
-    }
-    </script>
 
-    </body>
-    </html>
+
+
+
+
+
+
+
+
+
+
+    <div class="card-container">
+    <div class="card">
+        <i class="fas fa-headset"></i>
+        <h2>CUSTOMER SERVICE</h2>
+        <p>Available M-F, 8:30am to 4:30pm (MST)</p>
+        <p>(208) 203-7498 | Live Chat</p>
+    </div>
+    
+    <div class="card">
+        <i class="fas fa-shipping-fast"></i>
+        <h2>FREE SHIPPING ON ORDERS $150+</h2>
+        <p>Free US Domestic Shipping when you spend $150 or more!</p>
+    </div>
+    
+    <div class="card">
+        <i class="fas fa-undo"></i>
+        <h2>EASY RETURNS</h2>
+        <p>Buy with confidence and enjoy painless, hassle-free returns!</p>
+    </div>
+    
+    <div class="card">
+        <i class="fas fa-lock"></i>
+        <h2>SECURE PAYMENT</h2>
+        <p>Shop safely and securely knowing your experience is protected.</p>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+     <div class="row">
+       <div class="footer-col">
+         <h4>company</h4>
+         <ul>
+           <li><a href="#">about us</a></li>
+           <li><a href="#">our services</a></li>
+           <li><a href="#">privacy policy</a></li>
+           <li><a href="#">affiliate program</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>get help</h4>
+         <ul>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">shipping</a></li>
+           <li><a href="#">returns</a></li>
+           <li><a href="#">order status</a></li>
+           <li><a href="#">payment options</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>online shop</h4>
+         <ul>
+           <li><a href="#">watch</a></li>
+           <li><a href="#">bag</a></li>
+           <li><a href="#">shoes</a></li>
+           <li><a href="#">dress</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>follow us</h4>
+         <div class="social-links">
+           <a href="#"><i class="fab fa-facebook-f"></i></a>
+           <a href="#"><i class="fab fa-twitter"></i></a>
+           <a href="#"><i class="fab fa-instagram"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in"></i></a>
+         </div>
+       </div>
+     </div>
+    </div>
+ </footer>
+ 
+ <script>
+  function changeColor(imageSrc, element) {
+  var productImage = element.closest('.product').querySelector('.product-image');
+  productImage.src = imageSrc;
+  }
+  </script>
+  <script src="script.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    var filterButton = document.getElementById("filterButton");
+    var filterMenu = document.getElementById("filterMenu");
+
+    filterButton.addEventListener("click", function () {
+        if (filterMenu.style.display === "none" || filterMenu.style.display === "") {
+            filterMenu.style.display = "block";
+        } else {
+            filterMenu.style.display = "none";
+        }
+    });
+
+    // Close the filter menu if the user clicks outside of it
+    document.addEventListener("click", function (event) {
+        if (!filterButton.contains(event.target) && !filterMenu.contains(event.target)) {
+            filterMenu.style.display = "none";
+        }
+    });
+});
+</script>
+   
+
+</body>
+</html>
+
+</html>
