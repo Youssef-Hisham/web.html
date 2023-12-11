@@ -10,25 +10,21 @@
 </head>
 <body>
     <style>
- body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    .container { display: flex; }
-    .filter { width: 20%; background-color: #f4f4f4; padding: 20px; }
-    .products { width: 80%; padding: 20px; display: flex; flex-wrap: wrap; }
-    .product { width: 30%; margin: 1%; padding: 10px; border: 1px solid #ddd; }
-    .product img { width: 100%; }
-    .color-option { display: inline-block; width: 20px; height: 20px; margin: 5px; cursor: pointer; }
-    .inline-div {
-    display: inline-block; /* This makes the div inline */
-    margin: 10px; /* Adds some space between the divs */
-    padding: 10px; /* Adds some padding inside the divs */
-    border: 1px solid #000; /* Adds a border around the divs */
-    }
-    .filter {
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* ارتفاع السطر */
+}
+
+.container {
+    display: flex;
+}
+
+.filter {
     width: 20%;
     background-color: #f4f4f4;
     padding: 20px;
-    position: sticky; /* ليظل الفلتر ثابتًا أثناء التمرير */
-    top: 0; /* يثبت الفلتر في أعلى الصفحة */
 }
 
 .products {
@@ -36,6 +32,25 @@
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.product {
+    width: 30%;
+    margin: 1%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.product img {
+    width: 100%;
+}
+
+.color-option {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    cursor: pointer;
 }
 
 
@@ -47,21 +62,14 @@
     font-size: 12px;
     font-weight: bold;
 }
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        margin: 20px;
-    min-height: 100vh; 
-    }
+   
     
     .navbar {
         background-color:black;
         font-size: 20px;
         overflow:hidden;
         height: 130px;
-           
-        
+      
         
     }
   
@@ -183,93 +191,16 @@ body{
 ul{
   list-style: none;
 }
-.footer{
-  background-color: black;
-    padding: 70px 0;
-}
-.footer-col{
-   width: 25%;
-   padding: 0 15px;
-}
-.footer-col h4{
-  font-size: 18px;
-  color: #ffffff;
-  text-transform: capitalize;
-  margin-bottom: 35px;
-  font-weight: 500;
-  position: relative;
-}
-.footer-col h4::before{
-  content: '';
-  position: absolute;
-  left:0;
-  bottom: -10px;
-  background-color: orange;
-  height: 2px;
-  box-sizing: border-box;
-  width: 50px;
-}
-.footer-col ul li:not(:last-child){
-  margin-bottom: 10px;
-}
-.footer-col ul li a{
-  font-size: 16px;
-  text-transform: capitalize;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 300;
-  color: #bbbbbb;
-  display: block;
-  transition: all 0.3s ease;
-}
-.footer-col ul li a:hover{
-  color: orange;
-  padding-left: 8px;
-}
-.footer-col .social-links a{
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-color: rgba(255,255,255,0.2);
-  margin:0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  color: #ffffff;
-  transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-  color: #24262b;
-  background-color: orange;
-}
 
-/*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
-}
-}
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
-}
-}
-.container {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px;
-        }
-        body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+
+
+
 
 .filter-container {
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    width: 150px; /* تعديل العرض حسب الحاجة */
     background-color: black;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -277,17 +208,20 @@ ul{
 }
 
 #filterButton {
-    width: 120px; /* تعديل العرض حسب الحاجة */
+    width: 100%; /* جعل الزر يمتد على عرض الحاوية */
     padding: 10px;
     background-color: black;
     color: #fff;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .filter-menu {
     display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
     background-color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -313,7 +247,7 @@ ul{
     display: block;
     width: 100%;
     padding: 8px;
-    background-color: black;
+    background-color: #3498db;
     color: #fff;
     border: none;
     border-radius: 3px;
@@ -321,8 +255,12 @@ ul{
 }
 
 #filterMenu button:hover {
-    background-color: black;
+    background-color: #258cd1;
 }
+
+
+
+
 .products {
             width: 75%;
             padding: 20px;
@@ -353,7 +291,167 @@ ul{
             cursor: pointer;
             border-radius: 50%;
         }
-  
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+  background-color: black;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 15px 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color:orange;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 20px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 20px 20px 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: orange;
+}
+
+/*responsive*/
+@media(max-width: 800px){
+  .footer-col{
+    width: 100%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+.footer-col form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-col input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.footer-col button {
+    padding: 10px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+    position: relative; /* إضافة هذا لاستخدام الـ absolute */
+}
+
+.gym-logo {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff8c00; /* لون اللوجو، يمكنك تغييره حسب اختيارك */
+    letter-spacing: 2px;
+    
+    text-align: right; /* لوضع اللوجو على اليمين */
+}
+
+.gym-logo span {
+    display: inline-block;
+}
+
+.g {
+    color: #ffffff; /* لون الحرف G، يمكنك تغييره حسب اختيارك */
+    background-color: #ff8c00; /* لون الخلفية للحرف G، يمكنك تغييره حسب اختيارك */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.ym {
+    margin-left: -5px; /* لتحقيق التداخل بين حروف y و m */
+}
+
+.zone {
+    color: #ffffff; /* لون الحرف Z وباقي الكلمة، يمكنك تغييره حسب اختيارك */
+    background-color: #ff8c00; /* لون الخلفية للحروف Z وباقي الكلمة، يمكنك تغييره حسب اختيارك */
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+.gym-logo {
+    text-align: left; /* لتوجيه النص إلى اليمين */
+    margin-top: 30px; /* يمكنك ضبط هذه القيمة حسب الحاجة للتحكم في المسافة بين الفوتر واللوجو */
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between; /* يوفر توزيع المسافات بين العناصر */
+}
+
     </style>
 
 
@@ -498,6 +596,7 @@ ul{
         <p>Shop safely and securely knowing your experience is protected.</p>
     </div>
 </div>
+
 <footer class="footer">
     <div class="container">
      <div class="row">
@@ -538,11 +637,26 @@ ul{
            <a href="#"><i class="fab fa-linkedin-in"></i></a>
          </div>
        </div>
+       <div class="footer-col">
+        <h4>Subscribe</h4>
+        <form action="#" method="post">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
      </div>
+     <div class="gym-logo">
+        <span class="g">G</span>
+        <span class="ym">ym</span>
+        <span class="zone">Zone</span>
+    </div>
     </div>
  </footer>
+
+
+
  
  <script>
+    
   function changeColor(imageSrc, element) {
   var productImage = element.closest('.product').querySelector('.product-image');
   productImage.src = imageSrc;
