@@ -6,9 +6,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
    
-    <title>Gym Store</title>
-</head>
-<body>
+    <title>Store</title>
+
     <style>
 body {
     font-family: Arial, sans-serif;
@@ -125,13 +124,13 @@ body {
         background-color: orange;
         color: black;
     }
-    .search-icon, .user-icon {
+    .search-icon, .user-icon, .active {
     font-size: 20px;
     margin-left: 10px;
     line-height: 100px;
 }
 
-.search-icon i, .user-icon i {
+.search-icon i, .user-icon i, .active i {
     margin: 0;
     padding: 0;
 }
@@ -268,6 +267,8 @@ ul{
             flex-wrap: wrap;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* justify-content: center; */
+            margin-left: 200px;
         }
 
         .product {
@@ -425,19 +426,22 @@ ul{
 }
 
 .g {
-    color: #ffffff; /* لون الحرف G، يمكنك تغييره حسب اختيارك */
-    background-color: #ff8c00; /* لون الخلفية للحرف G، يمكنك تغييره حسب اختيارك */
+   
+    /*color: #ffffff; /* لون الحرف G، يمكنك تغييره حسب اختيارك */
+    /*background-color: #ff8c00; /* لون الخلفية للحرف G، يمكنك تغييره حسب اختيارك */
     padding: 5px 10px;
     border-radius: 5px;
+    color: #ff8c00;
 }
 
 .ym {
     margin-left: -5px; /* لتحقيق التداخل بين حروف y و m */
+    color: #ffffff;
 }
 
 .zone {
     color: #ffffff; /* لون الحرف Z وباقي الكلمة، يمكنك تغييره حسب اختيارك */
-    background-color: #ff8c00; /* لون الخلفية للحروف Z وباقي الكلمة، يمكنك تغييره حسب اختيارك */
+    /*background-color: #ff8c00; /* لون الخلفية للحروف Z وباقي الكلمة، يمكنك تغييره حسب اختيارك */
     padding: 5px 5px;
     border-radius: 5px;
 }
@@ -453,6 +457,8 @@ ul{
 }
 
     </style>
+    </head>
+    <body>
 
 
 <div class="shipping-message">
@@ -461,19 +467,17 @@ ul{
 <nav class="navbar">
     <ul class="nav-links">
         <li class="search-icon"><a href="#"><i class="fas fa-search"></i></a></li>
-        <li class="user-icon"><a href="#"><i class="fas fa-user"></i></a></li>
+        <li class="user-icon"><a href="login.html"><i class="fas fa-user"></i></a></li>
+        <li class="active"> <a href="tes3t.html"><i class="fa fa-fw fa-home"></i></a></li>
     </ul>
     <div class="brand">
         <i class="fa fa-fw fa-fire" style="font-size: 30px;"></i>
         <span style="color: orange; font-weight: bold;"><span style="color: #ff8c00;">G</span>  <span style="color: white;">YM ZONE</span>
-      </div>
+      
+    </div>
 </nav>
 
-<body class="product-page">
 
-
-    
-</body>
 <div class="container">
     <div class="filter-container">
         <button id="filterButton">Filter</button>
