@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Our Gym</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: url('https://img.freepik.com/premium-photo/cropped-photo-strong-athlrtic-man-taking-dumbbells-from-floor-work-out-modern-gym-warm-orange-light_116317-20357.jpg') center/cover no-repeat fixed;
+            backdrop-filter: blur(10px);
+            height: 150vh;
+            box-sizing: border-box;
+        }
+
+        .hero {
+            position: relative;
+            height: 40%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #222;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo h1 {
+            margin: 0;
+            color: #fff;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-menu a:hover {
+            color: #ff8c00;
+        }
+
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.2em;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            margin-top: 10px;
+            line-height: 1.5;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .hero-content p::before {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #ff8c00;
+            margin: 10px auto;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 2em;
+            box-sizing: border-box;
+        }
+
+        .service {
+            position: relative;
+            width: 100%;
+            max-width: 300px;
+            height: 400px;
+            margin: 20px;
+            text-align: center;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .service-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            filter: blur(10px);
+            z-index: -1;
+            transition: filter 0.3s ease-in-out;
+        }
+
+        .service:hover .service-background {
+            filter: blur(0);
+        }
+
+        .service-content {
+            position: relative;
+            z-index: 1;
+            padding: 1.5em;
+        }
+
+        .service h2 {
+            color: #ff8c00;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .service p {
+            color: #fcfbfb;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        .signup {
+            text-align: center;
+            padding: 4em 0;
+            background-color: #222;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        .signup-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        select,
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #555;
+            border-radius: 4px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ff8c00;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+    </style>
+    
+</head>
+
+<body>
+
+    <header class="hero">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Our Gym services</h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#signup">Select service</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="hero-content">
+            <h1>Welcome to Our Gym</h1>
+            <p>Your Journey to a Healthier You Starts Here</p>
+        </div>
+    </header>
+
+    <section id="services" class="services-container">
+        
+        <div class="service" id="service1">
+            <div class="service-background" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVzb25hbCUyMHRyYWluaW5nJTIwZ3ltfGVufDB8fDB8fHww');"></div>
+            <div class="service-content">
+                <h2>Personal Training</h2>
+                <p>Our experienced trainers are dedicated to helping you achieve your fitness goals. Personalized training programs tailored just for you.</p>
+            </div>
+        </div>
+
+        
+        <div class="service" id="service2">
+            <div class="service-background" style="background-image: url('https://images.unsplash.com/photo-1602827114685-efbb2717da9f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="service-content">
+                <h2>Group Classes</h2>
+                <p>Join our group classes for a fun and motivating workout experience. From high-intensity cardio to relaxing yoga sessions, we have it all.</p>
+            </div>
+        </div>
+
+        
+        <div class="service" id="service3">
+            <div class="service-background" style="background-image: url('https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+            <div class="service-content">
+                <h2>Fitness</h2>
+                <p>Fitness is more than just a physical activity; it's a holistic journey towards well-being. Engaging in regular exercise not only strengthens the body but also enhances mental clarity and emotional resilience.</p>
+            </div>
+        </div>
+
+    
+        <div class="service" id="service4">
+            <div class="service-background" style="background-image: url('https://images.unsplash.com/photo-1622599511051-16f55a1234d0?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJveGluZ3xlbnwwfHwwfHx8MA%3D%3D');"></div>
+            <div class="service-content">
+                <h2>Boxing</h2>
+                <p>Boxing is a dynamic and physically demanding combat sport that involves two individuals engaging in a regulated match. Participants, known as boxers, use a combination of strategic movements, defensive tactics, and powerful punches to score points or achieve a knockout victory.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="signup" class="signup">
+        <div class="signup-content">
+            <h2>Choose Your Service</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="serviceName">Select a Service:</label>
+                    <select id="serviceName" name="serviceName">
+                        <option value="personalTraining">Personal Training</option>
+                        <option value="groupClasses">Group Classes</option>
+                        <option value="Fitness">Fitness</option>
+                        <option value="Boxing">Boxing</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit">Subscription and payment</button>
+                <p id="validationMessage"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Our Gym. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+<script>
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        const services = document.querySelectorAll('.service');
+        
+        services.forEach(service => {
+            const image = service.querySelector('.service-image');
+            
+            service.addEventListener('mouseenter', function () {
+                image.style.filter = 'blur(0)';
+            });
+            
+            service.addEventListener('mouseleave', function () {
+                image.style.filter = 'blur(10px)';
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const signupForm = document.getElementById('signupForm');
+    const serviceNameInput = document.getElementById('serviceName');
+    const emailInput = document.getElementById('email');
+    const validationMessage = document.getElementById('validationMessage');
+
+    signupForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const selectedService = serviceNameInput.value;
+
+        if (validateEmail(emailInput.value)) {
+            alert('Successful');
+            signupForm.reset();
+            validationMessage.textContent = '';
+        } else {
+            validationMessage.textContent = 'Something went wrong';
+        }
+    });
+
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+});
+
+    </script>
+</body>
+</html>
